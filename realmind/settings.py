@@ -13,6 +13,12 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import cloudinary
+
+
+import django_heroku
+
+#import cloudinary_storage
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +32,7 @@ SECRET_KEY = 'django-insecure-%cy(6u9i(3kotxuc^&u5e^ec=nv127id5a^p)^187vrlgqh#kl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.realmindt.com','realmind.com']
+ALLOWED_HOSTS = ['www.realmindt.com','realmind.com','realmindt.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -82,12 +88,14 @@ WSGI_APPLICATION = 'realmind.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'realmind',
-        'USER' : 'postgres',
-        'PASSWORD' :'admin',
-        'HOST': 'localhost'
+        'NAME': 'degvfa2bv0la1b',
+        'USER' : 'itlzduosjtdnvo',
+        'PORT':5432,
+        'PASSWORD' :'c5e6de0d3077c06ad22e3c1c642eb8de2b66bc195bb99505a46c7ccb3ebdff73',
+        'HOST': 'ec2-3-229-8-233.compute-1.amazonaws.com'
     }
 }
+
 
 
 # Password validation
@@ -152,6 +160,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 
+django_heroku.settings(locals())
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER ='realmindt@gmail.com'
