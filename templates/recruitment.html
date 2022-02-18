@@ -1,0 +1,109 @@
+{% extends 'index.html' %}
+ {% load static %}
+{% block content %}
+
+
+<style>
+   .caro{
+    display: none;
+}
+    .features{
+        display: none;
+    }
+    .about{
+        display: none;
+    }
+    .realmind{
+      display: none;
+  }
+  .banner{
+     display: none;
+   }
+    .feature{
+        margin-top: 70px;
+        margin-bottom: 150px;
+       
+       
+        font-size: 22px;
+        font-weight: 500;
+        font-family: "Roboto", sans-serif;
+
+        align-items: center;
+        margin-right: 50px;
+     
+     
+       
+    }
+    .feature-block{
+        align-items: center;
+        width: 100%
+    }
+    .feature-item{
+        width: 1200px;
+    }
+   
+    .feature-item{
+        width: 900px;
+    }
+    .mb-3{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+  
+  
+  /*p{
+      font-size: 35px;
+      font-family: "Roboto", sans-serif;
+      color: #000;
+  }*/
+ 
+
+</style>
+
+
+
+
+
+<section class="feature">
+    <h4 class="mb-3">Developers' Recriutment </h4>
+	<div class="container">
+      
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="feature-block">
+				
+
+					<div class="feature-item">
+						
+						<!--<span>Online Services</span>-->
+					
+                   
+                       <p class="mb-4" style="font-size: 20px;">Looking for softwae developers? Look no futher! <br> Realmind technology has a pool of dedicted and smart developers who are excellent in the  field and can turn your ideas into real products. </p>
+                        <p class="mb-4" style="font-size: 20px;">Realmind Technology recruitment agency  provides a central platform to automate the candidate search, competency and hiring process. We have the best brains for any software project.
+                        </p>
+                        <p class="mb-4" style="font-size: 20px;">Recruiting competent developers for your software project is easier with Realmind technoloy.</p>
+                         <!--<p>
+                            Recruitment agency software is unique because it serves organizations exclusively focused on the sourcing and hiring process. In contrast, other recruiting software usually serves HR departments that handle recruiting in addition to other HR functions within a business. Staffing agency software, which focuses on building a pool of qualified talent to provide on-demand and temporary workers to companies, is closely related to recruitment agency software.
+                            </p>
+                            <p>Recruitment agency software offers suites for recruitment marketing, sourcing, applicant tracking, candidate relationship management, screening, assessment, interviewing, offering, hiring, onboarding, and analytics for recruiter performance and hiring trends.
+                            </p>
+                            <p>AI-powered sourcing tools scan job boards and social media, capture information, create candidate profiles, and rank them. Candidate relationship management features improve the candidate experience, leaving applicants more likely to accept employment offers, and create an environment where they would be more inclined to consider future opportunities. The sourcing and ongoing relationship management functions are particularly crucial for recruitment agencies, who often need standing pools of talent to source from.
+                            </p>
+                            <p>Screening tools collect documents to validate identities and enable background checks. Built-in assessment tools test applicant skills within the recruitment platform
+                            </p>-->
+                            <a type="button" class="btn btn-danger" href="{% url 'product:contact' %}">Contact Us</a>
+
+					</div>
+   	
+                  		</div>
+                          
+                          
+			</div>
+            
+		</div>
+        
+	</div>
+   </section>
+
+{% endblock %}

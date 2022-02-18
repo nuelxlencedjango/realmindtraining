@@ -1,0 +1,84 @@
+
+
+    {% extends 'index.html' %}
+    {% load static %}  
+    {% block content %} 
+    
+    {% load crispy_forms_tags %}
+
+<div class="container organization"  style="width: 25rem; margin-top: 70px; height: 20rem; margin-bottom: 50px; background-color:#e9ecef;" >
+    <div class="col-md-10 offset-md-1 mt-5" >
+        <!--<div class="jumbotron"> 
+             <h3 id="form-title" style="text-align: center;">Please login to enable you request the service you want</h3>-->
+            <h3 class="display-44" style="text-align: center; font-size: 22px; color: #343a40; padding-top: 20px;">Click to register</h3>
+            <!--<p id="form-title" >Please login to enable you request the service you want</p>-->
+           
+                <a href="{% url 'accounts:company' %}"
+                 style="font-size: 12px; text-decoration: none; text-align: left;"role="button" class="btn btn-danger"  >Organisation</a>
+                 <a href="{% url 'accounts:register' %}"
+                 style="font-size: 12px; text-align: center; text-decoration: none;" role="button" class="btn btn-success" >Individual</a>
+          
+           <!-- <a action="" role="button" class="btn btn-primary btn-lg">Submit</a>-->
+        </div>
+
+<div class="mt-4">
+    <div class="d-flex justify-content-center links" style="color:black">
+        Already Have An Account? <a href="{% url 'accounts:login' %}" style="color:  #e12454; font-size: 22px; text-align: center;">Login</a>
+    </div>
+  </div>
+    </div>
+
+ 
+    
+    
+    
+    
+    
+    
+    <style>
+        .caro{
+    display: none;
+}
+       .organization a{
+           margin-top: 60px;
+       }
+       .banner{
+     display: none;
+   }
+        .features{
+            display: none;
+        }
+        .about{
+            display: none;
+        }
+        .realmind{
+          display: none;
+      }
+       .form2{
+           margin-top: 100px;
+           margin-bottom: 150px;
+       }
+       
+       
+       
+     </style>
+    
+    
+    
+    </head>
+    <body>
+    
+    
+       
+       
+    
+    
+    
+    
+    
+    
+    {% endblock content %}
+    
+    
+    
+    

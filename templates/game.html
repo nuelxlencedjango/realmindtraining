@@ -1,0 +1,74 @@
+
+
+{% extends 'index.html' %}
+{% load static %}  
+{% block content %} 
+
+
+
+
+
+
+<style>
+.caro{
+    display: none;
+}
+    .features{
+            display: none;
+        }
+        .banner{
+     display: none;
+   }
+        .about{
+            display: none;
+        }
+        .realmind{
+          display: none;
+      }
+      .support{
+      
+      }
+      .col {
+          display: flex;
+          width: 1170px;
+      }
+      .col-lg-4{
+          display: flex;
+      }
+
+    </style>
+
+
+
+
+
+
+
+
+<section class="section service">
+    <div class="container">
+        <div class="row">
+            <h3>Game development</h3>
+            <div class=" col-md-8">
+                <div class="service-item mb-4">
+               <img src="{% static 'images/games/game6.jpg' %}" width="800" height="350" alt="">
+                    </div>
+
+                    <div class="content">
+                        
+                        <p>Game development is one aspect of computer programming that reuires thorogh know-how in other to develop games. </p>
+
+                        <P>We at Realmind technology have experts who will train and guide you to develop games and show you how you can deploy them.</P>
+                        <P>We will not only train you , we will help help buid your first mobile game and guide you to develop one yourself.</P>
+                        
+                        <p>You will build amazing games to reach an audience oaround the globe . Learn about new tools and best practices to support your development and game performance</p>
+                        
+                        <p></p>
+                    </div>
+              </p>
+                        </div>
+            </div>
+   </div>
+</section>
+
+{% endblock %}

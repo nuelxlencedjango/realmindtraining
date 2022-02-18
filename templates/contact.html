@@ -1,0 +1,118 @@
+{% extends 'index.html' %}
+{% load static %}  
+{% block content %} 
+
+{% load crispy_forms_tags %} 
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<style>
+    .caro{
+    display: none;
+}
+  .features{
+        display: none;
+    }
+    .about{
+        display: none;
+    }
+    .realmind{
+      display: none;
+  }
+  .banner{
+     display: none;
+   }
+
+</style>
+
+
+<section class="contact">
+    
+	<div class="content">
+		<h2>Contact Us</h2>
+		<p>Contact us today for a new experience with technology </p>
+	</div>
+	<div class="container">
+		<div class="contactInfo">
+			<div class="box">
+				<div class="icon">
+                    <i class="fa fa-address-card"></i>
+                </div>
+				<div class="text">
+					<h3>Address</h3>
+					<p>7/12 Rumens road <br> Ikoyi , Lagos</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="icon">
+                    <i class="fa fa-phone-square-alt"></i>
+                </div>
+				<div class="text">
+					<h3>Phone</h3>
+					<p>+2348079385255 </p>
+					<p>Whatsapp +2348079385255 </p>
+				</div>
+                <!--<div class="text">
+					<h3>Phone</h3>
+					<p>08177206739 </p>
+					<p>Whatsapp  :08177206739 </p>
+				</div>-->
+			</div>
+			<div class="box">
+				<div class="icon">
+                    <i class="fa fa-envelope-square"></i>
+                </div>
+				<div class="text">
+					<h3>Email</h3>
+					<p>realmindt@gmail.com</p>
+				</div>
+			</div>
+		
+		</div>
+        <div class="contactForm">
+            <form action="{% url 'product:contact' %}" method="POST">
+                <h2>Send Us A  Message  - {{ message_name }}</h2>
+                {% csrf_token %}
+                <div class="inputBox">
+                    <input type="text" name="message-name" placeholder="Full name" required>
+                    <!--<span>Full Name</span>-->
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="message-phone" placeholder="Phone Number" required>
+                   <!--- <span>Phone</span>-->
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="message-email" placeholder="Email" required>
+                    <!--<span>Email</span>-->
+                </div>
+                <div class="inputBox">
+                    <textarea name="message" placeholder="Type your message here" id="" cols="30" rows="10"></textarea>
+                    <!--<span>Type your message</span>-->
+                </div>
+                <div class="inputBox">
+                    <input type="submit" name="" value="Send">
+                   
+                </div>
+            </form>
+
+        </div>
+	</div>
+</section>
+ <!--font awsome-->
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

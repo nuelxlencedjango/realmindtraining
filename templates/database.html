@@ -1,0 +1,112 @@
+
+{% extends 'index.html' %}
+{% load static %}  
+{% block content %} 
+
+
+
+
+
+
+<style>
+.caro{
+    display: none;
+}
+    .features{
+            display: none;
+        }
+        .about{
+            display: none;
+        }
+        .realmind{
+          display: none;
+      }
+      .support{
+      
+      }
+      .banner{
+     display: none;
+   }
+      .col {
+          display: flex;
+          width: 1170px;
+      }
+      .col-lg-4{
+          display: flex;
+      }
+      .content p{
+          font-size: 20px;
+          background-color: #223a66;
+          color: #fff;
+          border: #e12454 1rem;
+          transition: 0.5s ease-in;
+      }
+
+    </style>
+    
+
+
+ 
+   
+   
+   
+ 
+
+
+
+
+
+
+
+
+
+
+<div class="container" style="margin-top: 80px; text-align: center;">
+    <h3>Database management </h3>
+</div>
+
+<section class="section service">
+    <div class="container">
+       
+        <div class="row">
+          
+            <div class=" col-md-6">
+               
+                <div class="service-item mb-4 col-md-6">
+                    <img src="{% static 'images/database1.jpg' %}" width="500" height="400" alt="">
+                         </div>
+            </div>
+            <div class="col-md-6">
+               <h3>Database management</h3>
+                <div class="content" >
+                        
+                    <p>The most important in any application is the data derived from such app.Database management is the most inportant in any organization.</p>
+                    <p>As such, database requirement requires skills to,mine, organize,process, save ,fetch,update ,distribute to the approrirate channels  </p>
+                    <p>Organization all over the world look for suck skills and pay handsomely. </p>
+                    <P>At Realmind Tech, we teach you everything about database . From beginners level till you become a professional .</P>
+                    
+                        
+               
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

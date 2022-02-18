@@ -1,0 +1,106 @@
+{% extends 'index.html' %}
+{% load static %}  
+{% block content %}
+    
+
+
+<style>
+.caro{
+    display: none;
+}
+    .features{
+            display: none;
+        }
+        .banner{
+           display: none;
+   }
+        .about{
+            display: none;
+        }
+        .realmind{
+          display: none;
+      }
+      .support{
+      
+      }
+      .form2{
+        margin-top: 100px;
+        margin-bottom: 150px;
+      }
+        
+      
+     
+    </style>
+    
+{% for message in messages %}
+{{ message}}
+{% endfor %}
+    
+    <div id="form2" class="container form2" style="width: 500px;  background-color: #223a66; align-items: center; text-align: center;">
+      <form action="{% url 'accounts:company' %}" method="POST" class="row g-3">
+          {% csrf_token %}
+          <div class="col-md-4">
+              <label for="inputEmail4" class="form-label" >Username</label>
+              <input type="text" class="form-control" id="inputusername" name="username" placeholder="username">
+     
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Organisation's name</label>
+              <input type="text" class="form-control" id="inputfirst_name" name="company" placeholder="Name of the organization" >
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputfirst_name" name="address" placeholder="Address of the organization" >
+              </div>
+          
+          <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Phone</label>
+              <input type="text" class="form-control" id="inputNumber" name="phone" placeholder="Phone Number">
+            </div>
+            <div class="col-md-4">
+                <label for="inputEmail4" class="form-label">How many people?</label>
+                <input type="text" class="form-control" id="inputlast_name" name="number_of_student" placeholder="Number of canidates" >
+         
+              </div>
+          <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputlast_name" name="email" placeholder="Email" >
+       
+            </div>
+         
+    
+          <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword4" name="password" placeholder="Password">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Repeat Password</label>
+              <input type="text" class="form-control" id="inputPassword4" name="password2" placeholder="Repeat Password">
+            </div>
+    
+          <div class="col-12">
+          <!--<button role="button" class="btn btn-danger btn-lg" style="align-items: center; margin-top: 40px;">Submit</button>-->
+          
+          <button type="submit" class="btn btn-danger">Submit</button>
+    
+        
+          </div>
+        </form>
+    
+    
+    
+    {{ form.errors }}
+    
+    
+    
+    <div class="mt-4">
+      <div class="d-flex justify-content-center links" style="color:#fff">
+          Already Have An Account? <a href="{% url 'accounts:login' %}"
+          class="mm-3" style="color:red">Login</a>
+      </div>
+    </div>
+    
+    </div>
+
+{% endblock %}    
+    
