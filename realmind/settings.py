@@ -19,7 +19,7 @@ import dj_database_url
 
 
 import cloudinary
-#import django_heroku
+import django_heroku
 
 
 
@@ -192,7 +192,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER ='realmindt@gmail.com'
