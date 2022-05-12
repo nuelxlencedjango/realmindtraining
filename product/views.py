@@ -175,3 +175,9 @@ def game(request):
 
 def database(request):
     return render(request, 'database.html')
+
+
+    ##psycopg2==2.9.1
+    #pandas==1.3.1
+    ##cryptography==3.4.7
+    #yarl==1.6.3
