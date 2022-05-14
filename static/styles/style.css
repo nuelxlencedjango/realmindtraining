@@ -982,7 +982,7 @@ ul{
   position: relative;
   overflow: hidden;
   background: #fff;
-  background: url("../images/pics/code6.jpg"),url("../images/pics/code6.jpg") no-repeat;
+  background: url("../images/pics/code6.jpg") no-repeat;
   background-size: contain,cover;
  
  
@@ -1370,7 +1370,7 @@ ul{
 }
 
 .cta {
-  background: url("../images/bg/bg-4.jpg") no-repeat 50% 50%;
+ 
   background-size: cover;
   position: relative;
 }
