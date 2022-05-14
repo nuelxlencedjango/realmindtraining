@@ -1,12 +1,4 @@
-/*=== MEDIA QUERY ===*/
-/*
-Theme Name: Medic
-Author: Themefisher
-Author URI: https://themefisher.com/
-Description: Medicle Template
-Version: 1.0.0
 
-*/
 @import url("https://fonts.googleapis.com/css?family=Exo:500,600,700|Roboto&display=swap");
 html {
   overflow-x: hidden;
@@ -394,20 +386,7 @@ a:focus {
 .opt{
   display: none;
 }
-.container .col-md-3:hover{
-  /*background-color: #ccc;
-  border: #7755A2;
-  color: #B4B4B4;
-  font-size: 13px;*/
-  /*border: solid 1px #fff;*/
 
-
-  /*border-top: 1px solid transparent;
-  transition: 0.5s;
-
-  border-radius: 0 0 10px 10px;8*/
-  
-}
 
 
 /* card image*/
@@ -417,11 +396,7 @@ a:focus {
   /*8border-radius: 20px;*/
   margin-left: 0px;
 }
-.container .col-md-3 img:hover{
-  /*width: 100%;
-  border-radius: none;
-  border: solid 1px green;*/
-}
+
 .container .col-md-3 a{
   text-decoration: none;
 }
@@ -793,24 +768,6 @@ ul{
   color: #24262b;
   background-color: #fff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
