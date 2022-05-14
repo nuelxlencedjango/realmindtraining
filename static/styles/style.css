@@ -1972,37 +1972,7 @@ ul{
   color: #223a66;
 }
 
-/*.widget .footer-menu a {
-  color: #6F8BA4;
-}
 
-.widget .footer-menu a:hover {
-  color: #e12454;
-}
-
-.footer-contact-block span {
-  font-weight: 400;
-  color: #6F8BA4;
-}
-
-.footer-contact-block i {
-  font-size: 20px;
-}
-
-.footer-btm {
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.footer-socials li a {
-  width: 45px;
-  height: 45px;
-  background: #6F8BA4;
-  color: #fff;
-  display: inline-block;
-  text-align: center;
-  border-radius: 100%;
-  padding-top: 12px;
-}*/
 
 .widget-contact h6 {
   font-weight: 500;
@@ -2058,4 +2028,3 @@ ul{
   opacity: 1;
 }
 
-/*# sourceMappingURL=maps/style.css.map */
