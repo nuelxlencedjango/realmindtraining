@@ -43,7 +43,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 #DEBUG = os.getenv("DEBUG", "False") == "True"
 #ALLOWED_HOSTS = []
 
-#ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
 #ALLOWED_HOSTS = ['www.realmindt.com','realmind.com','realmindt.herokuapp.com','127.0.0.1']
 
@@ -52,12 +52,6 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 # Application definition
 
 
-DEBUG = str(os.environ.get('DEBUG')) =='1' #1 == True
-ENV_ALLOWED_HOST = os.environ.get('DJANGO_ALLOWED_HOSTS') or None
-
-ALLOWED_HOSTS = []
-if not DEBUG:
-    ALLOWED_HOSTS +=[os.environ.get('DJANGO_ALLOWED_HOST')]
 
 
 INSTALLED_APPS = [
