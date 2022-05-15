@@ -43,14 +43,13 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 #DEBUG = os.getenv("DEBUG", "False") == "True"
 #ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+#ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
-#ALLOWED_HOSTS = ['www.realmindt.com','realmind.com','realmindt.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['www.realmindt.com','realmind.com','realmindt.herokuapp.com','127.0.0.1']
 
 #DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 # Application definition
-
 
 
 
@@ -157,6 +156,7 @@ if POSTGRES_READY:
         
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
