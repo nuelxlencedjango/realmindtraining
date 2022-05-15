@@ -52,7 +52,6 @@ ALLOWED_HOSTS = ['www.realmindt.com','realmind.com','realmindt.herokuapp.com','1
 # Application definition
 
 
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
