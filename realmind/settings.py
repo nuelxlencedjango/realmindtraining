@@ -126,14 +126,41 @@ WSGI_APPLICATION = 'realmind.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-DATABASES = {
+#DATABASES = {
+   # 'default': {
+    #    'ENGINE': 'django.db.backends.postgresql',
+    #    'NAME': 'degvfa2bv0la1b',
+    #    'USER' : 'itlzduosjtdnvo',
+    #    'PORT':5432,
+    #    'PASSWORD' :'c5e6de0d3077c06ad22e3c1c642eb8de2b66bc195bb99505a46c7ccb3ebdff73',
+    #    'HOST': 'ec2-3-229-8-233.compute-1.amazonaws.com'
+   # }
+#}
+POSTGRES_DB = os.environ.get("POSTGRES_DB") #DB name
+POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD")
+POSTGRES_USER = os.environ.get("POSTGRES_USER")
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST")
+POSTGRES_PORT = os.environ.get("POSTGRES_PORT")
+
+POSTGRES_READY =(
+    POSTGRES_DB is not None
+     and POSTGRES_PASSWORD is not None
+     and POSTGRES_USER is not None
+     and POSTGRES_HOST is not None
+     and POSTGRES_PORT is not None
+)
+
+if POSTGRES_READY:
+    DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'degvfa2bv0la1b',
-        'USER' : 'itlzduosjtdnvo',
-        'PORT':5432,
-        'PASSWORD' :'c5e6de0d3077c06ad22e3c1c642eb8de2b66bc195bb99505a46c7ccb3ebdff73',
-        'HOST': 'ec2-3-229-8-233.compute-1.amazonaws.com'
+        'NAME': POSTGRES_DB,
+        'USER' : POSTGRES_USER,
+        'PASSWORD' :POSTGRES_PASSWORD,
+        'HOST': POSTGRES_HOST,
+        'PORT':POSTGRES_PORT,
+        
+        
     }
 }
 
