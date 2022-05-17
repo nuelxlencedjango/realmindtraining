@@ -45,7 +45,7 @@ DEBUG = True
 
 #ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','www.realmindt.com','realmind.com']
+ALLOWED_HOSTS = ['www.realmindt.com','realmind.com']
 
 #DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
