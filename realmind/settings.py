@@ -33,21 +33,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-%cy(6u9i(3kotxuc^&u5e^ec=nv127id5a^p)^187vrlgqh#kl'
+SECRET_KEY = 'django-insecure-%cy(6u9i(3kotxuc^&u5e^ec=nv127id5a^p)^187vrlgqh#kl'
 
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
+#SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+DEBUG = False
 
 #to decide later
-DEBUG = os.getenv("DEBUG", "False") == "True"
-#ALLOWED_HOSTS = []
+#DEBUG = os.getenv("DEBUG", "False") == "True"
+#ALLOWED_HOSTS = ['127.0.0.1','localhost',]
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+#ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
-#ALLOWED_HOSTS = ['www.realmindt.com','realmind.com','realmindt.herokuapp.com','sea-turtle-app-mkr8n.ondigitalocean.app','127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','www.realmindt.com','realmind.com','realmindt.herokuapp.com']
 
-DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
+#DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 # Application definition
 
@@ -111,28 +111,28 @@ WSGI_APPLICATION = 'realmind.wsgi.application'
 
 
 
-if DEVELOPMENT_MODE is True:
-    DATABASES = {
-        "default": {
+#if DEVELOPMENT_MODE is True:
+  #  DATABASES = {
+      #  "default": {
             #"ENGINE": "django.db.backends.sqlite3",
             #"NAME": os.path.join(BASE_DIR, "db.sqlite3"),
 
-        'ENGINE': 'django.db.backends.postgresql',
-        'USER' : 'itlzduosjtdnvo',
-        'NAME': 'degvfa2bv0la1b',
-        'PORT':5432,
-        'PASSWORD' :'c5e6de0d3077c06ad22e3c1c642eb8de2b66bc195bb99505a46c7ccb3ebdff73',
-        'HOST': 'ec2-3-229-8-233.compute-1.amazonaws.com'
-        }
-    }
+       # 'ENGINE': 'django.db.backends.postgresql',
+       # 'USER' : 'itlzduosjtdnvo',
+       # 'NAME': 'degvfa2bv0la1b',
+       # 'PORT':5432,
+        #'PASSWORD' :'c5e6de0d3077c06ad22e3c1c642eb8de2b66bc195bb99505a46c7ccb3ebdff73',
+       # 'HOST': 'ec2-3-229-8-233.compute-1.amazonaws.com'
+        #}
+   # }
     
-elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
-    if os.getenv("DATABASE_URL", None) is None:
-        raise Exception("DATABASE_URL environment variable not defined")
+#elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
+   # if os.getenv("DATABASE_URL", None) is None:
+    #    raise Exception("DATABASE_URL environment variable not defined")
         
-    DATABASES = {
-        "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
-    }
+  #  DATABASES = {
+   #     "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
+  #  }
 
 
 
@@ -140,16 +140,16 @@ elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-#DATABASES = {
-   # 'default': {
-    #    'ENGINE': 'django.db.backends.postgresql',
-    #    'NAME': 'degvfa2bv0la1b',
-    #    'USER' : 'itlzduosjtdnvo',
-    #    'PORT':5432,
-    #    'PASSWORD' :'c5e6de0d3077c06ad22e3c1c642eb8de2b66bc195bb99505a46c7ccb3ebdff73',
-    #    'HOST': 'ec2-3-229-8-233.compute-1.amazonaws.com'
-   # }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'degvfa2bv0la1b',
+        'USER' : 'itlzduosjtdnvo',
+        'PORT':5432,
+        'PASSWORD' :'c5e6de0d3077c06ad22e3c1c642eb8de2b66bc195bb99505a46c7ccb3ebdff73',
+        'HOST': 'ec2-3-229-8-233.compute-1.amazonaws.com'
+    }
+}
 #POSTGRES_DB = os.environ.get("POSTGRES_DB") #DB name
 #POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD")
 #POSTGRES_USER = os.environ.get("POSTGRES_USER")
