@@ -1,22 +1,22 @@
-(function ($) {
+/*(function ($) {
     'use strict';
 
     var form = $('.contact__form'),
         message = $('.contact__msg'),
-        form_data;
+        form_data;*/
 
     // Success function
-    function done_func(response) {
+    /*function done_func(response) {
         message.fadeIn().removeClass('alert-danger').addClass('alert-success');
         message.text(response);
         setTimeout(function () {
             message.fadeOut();
         }, 2000);
         form.find('input:not([type="submit"]), textarea').val('');
-    }
+    }*/
 
     // fail function
-    function fail_func(data) {
+   /* function fail_func(data) {
         message.fadeIn().removeClass('alert-success').addClass('alert-success');
         message.text(data.responseText);
         setTimeout(function () {
@@ -36,4 +36,4 @@
         .fail(fail_func);
     });
     
-})(jQuery);
+})(jQuery);*/
