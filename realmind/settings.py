@@ -37,7 +37,7 @@ SECRET_KEY = 'django-insecure-%cy(6u9i(3kotxuc^&u5e^ec=nv127id5a^p)^187vrlgqh#kl
 
 #SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['www.realmindt.com','realmind.com','realmindt.herokuapp.com','127.0.0.1']
 
 
