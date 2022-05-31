@@ -44,7 +44,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 1.1rem;
+  font-size: 22px;
   line-height: 30px;
 }
 
@@ -114,7 +114,10 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   border: 1px solid #223a66;
 }
 .carousel{
+  margin-top: 20px;
   height: 65vh;
+  padding-left: 150px;
+  padding-right: 150px;
  
 }
 .carousel-item{
@@ -1939,7 +1942,38 @@ ul{
 
 
 @media (max-width: 930px) {
-
+  #navbar-nav {
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    background-color: #223a66;
+    /* background-color: #0d6efd; */
+    color: #fff;
+    right: 0;
+    left: 0;
+    text-align: center;
+    /* padding: 16px 0; */
+    height: auto;
+}
+  .carousel-inner {
+    padding-left: 40px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-right: 40px;
+}
+.carousel {
+  height: 40vh;
+}
+ .carousel .carousel-item{
+  height: 100%;
+  ;
+}
+ .carousel .carousel-item img {
+  height: 50vh;
+  margin-bottom: 40px;
+  padding: 10px;
+}
   #navbar-nav { 
     /*margin-top: 10px;*/
     display:none;
@@ -1986,6 +2020,29 @@ ul{
 
 
 @media (max-width: 768px) {
+
+
+element.style {
+}
+.carousel-inner {
+    padding-left: 40px;
+    position: relative;
+    width: 95%;
+    overflow: hidden;
+    padding-right: 40px;
+}
+.carousel {
+  height: 40vh;
+}
+ .carousel .carousel-item{
+  height: 100%;
+  ;
+}
+ .carousel .carousel-item img {
+  height: 35vh;
+  margin-bottom: 40px;
+  padding: 10px;
+}
   .header-top-bar{
    
   }
@@ -2015,18 +2072,7 @@ ul{
    #navbarmain .nav-link{
      color: #fff;
    }
-   .carousel {
-    height: 40vh;
-}
-   .carousel .carousel-item{
-    height: 100%;
-    ;
-  }
-   .carousel .carousel-item img {
-    height: 35vh;
-    margin-bottom: 40px;
-    padding: 10px;
-  }
+  
 
   .testimonial-wrap {
     margin-left: 0px;
@@ -2093,12 +2139,19 @@ ul{
   margin-top: 30px;
   color: #fff;
   /* line-height: 25px; */
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px 10px;
 }
 .col-lg-6 .fact .section-right p{
   line-height: 25px;
+  font-size: 16px;
+}
+h4, .h4{
+  line-height: 20px;
+}
+h4, .h4 {
   font-size: 18px;
+  
 }
 }
 
@@ -2135,7 +2188,8 @@ ul{
     background: #fff !important;
   }
   .col-lg-6 h2{
-    font-size: 28px;
+    font-size: 22px;
+    font-weight: 500;
   }
 
   .footer{
@@ -2160,8 +2214,11 @@ ul{
     display: block;
     text-align: left;
     transition: all 0.3s ease;
-    margin-left: 50px;
+    margin-left: -25px;
+    opacity: 1.2;
 }
+
+
 .desc ol li h4 {
   color: #fff;
   font-size: 14px;
@@ -2178,6 +2235,10 @@ ul{
   line-height: 25px;
   font-size: 18px;
 }
+h4, .h4 {
+  font-size: 22px;
+  line-height: 23px;
+}
 }
 
 
@@ -2185,6 +2246,15 @@ ul{
 
 
 @media (max-width: 400px) {
+  .carousel-inner {
+    padding-left: 0px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-right: 0px;
+    padding-right: 0;
+    /* height: 200px; */
+}
   .text-lg {
     font-size: 28px;
   }
@@ -2225,7 +2295,7 @@ ul{
   margin-top: 30px;
   color: #fff;
   /* line-height: 25px; */
-  font-size: 14px;
+  font-size: 12px;
   padding: 10px 10px;
 }
 .col-lg-6 .fact .section-right p{
@@ -2239,20 +2309,33 @@ ul{
 
   .desc ol li h4 {
     color: #fff;
-    font-size: 12px;
+    font-size: 10px;
     font-family: "Roboto", sans-serif;
-    line-height: 15px;
+    line-height: 11px;
 }
 .section-right {
   margin-top: 30px;
   color: #fff;
   /* line-height: 25px; */
-  font-size: 14px;
+  font-size: 8px;
   padding: 5px 5px;
 }
 .col-lg-6 .fact .section-right p{
   line-height: 15px;
-  font-size: 14px;
+  font-size: 8px;
+}
+p {
+  line-height: 23px;
+}
+.prod .container h1 {
+  margin: 50px 0 0;
+  text-align: left;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 25px;
+  font-family: 'Oswald', sans-serif;
+  color: #223a66;
 }
 }
 
