@@ -87,8 +87,15 @@ input[type=text]:focus, input[type=password]:focus {
    .form2{
        margin-top: 100px;
        margin-bottom: 150px;
+       width: 500px;  
+       background-color: #e9ecef; 
+       align-items: center; 
+       text-align: center; 
+       margin-top: 50px;
    }
-   
+   .mm-3{
+     color: #e12454;
+   }
    
    
  </style>
@@ -111,7 +118,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 
 
-<div id="form2" class="container form2" style="width: 500px;  background-color: #e9ecef; align-items: center; text-align: center; margin-top: 50px;">
+<div id="form2" class="container form2" >
   <form action="{% url 'accounts:register' %}" method="POST" class="row g-3">
       {% csrf_token %}
       <div class="col-md-8">
@@ -162,7 +169,7 @@ input[type=text]:focus, input[type=password]:focus {
 <div class="mt-4">
   <div class="d-flex justify-content-center links" style="color:black">
       Already Have An Account? <a href="{% url 'accounts:login' %}"
-      class="mm-3"">Login</a>
+      class="mm-3">&nbsp; Login</a>
   </div>
 </div>
 

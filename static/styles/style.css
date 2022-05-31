@@ -607,6 +607,7 @@ a:focus {
 .contact .content{
   /*max-width: 800px;*/
   text-align: center;
+  width: 100%;
  
 }
 .contact .content h2{
@@ -620,14 +621,15 @@ a:focus {
   color: #000;
 }
 .contact .container{
-  width: 90%;
+  width: 100%;
   display: flex;
   /*justify-content: center;
   align-items: center;*/
   margin-top: 20px;
 }
 .contact .container .contactInfo{
-  width: 25%;
+ 
+  width: 50%;
   display: flex;
   flex-direction: column;
   margin-left: 20px;
@@ -637,6 +639,7 @@ a:focus {
   position: relative;
   padding: 10px 0;
   display: flex;
+  
 }
 .contact .container .contactInfo .box .icon{
   min-width: 60px;
@@ -654,7 +657,7 @@ a:focus {
   font-size: 16px;
   color: #333;
   flex-direction: column;
-  font-weight: 600;
+  font-weight: 400;
   font-family: "Roboto", sans-serif;
 }
 .contact .container .contactInfo .box .text h3{
@@ -728,7 +731,7 @@ a:focus {
   font-family: "Roboto", sans-serif;
 
   background-repeat: no-repeat;
-  background-image: url('/static/images/code7.jpg');
+  /*background-image: url('/static/images/computer9.jpg');*/
   /*background-image: linear-gradient(red, yellow);*/
   background-color: #cccccc; /* Used if the image is unavailable */
   /*height: 500px; You must set a specified height */
@@ -747,8 +750,23 @@ a:focus {
 
 }
 
+.support .card h3{
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  color: #fff;
+}
+.support p{
 
 
+  padding: 20px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  color: #000;
+}
 
 .footer{
   /*background-color: #6F8BA4;*/
@@ -2015,6 +2033,21 @@ ul{
     display: block;
   
    }
+   .feature-item {
+    width: 100%;
+}
+.feature-item p{
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  padding: 0px 5px;
+}
+.contact .container .contactInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
 
 }
 
@@ -2126,8 +2159,39 @@ element.style {
     font-size: 14px;
   
 }
-
+.aboutus p{
   
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  padding: 0px 5px;
+
+}
+.aboutus h3{
+  font-size: 18px;
+}
+.contact .container{
+  display: block;
+  
+}
+.contact {
+  width: 100%;
+  display: block;
+}
+.contactForm {
+  width: auto;
+  padding: 70px;
+  height: auto;
+  background: #fff;
+}
+#log .container h2{
+  font-size: 22px;
+}
+.modal {
+  
+  left: 0px !important;
+  
+}
 }
 
 
@@ -2153,6 +2217,7 @@ h4, .h4 {
   font-size: 18px;
   
 }
+
 }
 
 
@@ -2180,9 +2245,17 @@ h4, .h4 {
     font-size: 38px;
     line-height: 50px;
   }
-  .contact{
-    display: flex;
-  }
+  .contact {
+    display: block;
+}
+.contact .content h2 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #223a66;
+}
+.contact .container {
+  display: block;
+}
   .banner {
     min-height: 450px;
     background: #fff !important;
@@ -2239,6 +2312,17 @@ h4, .h4 {
   font-size: 22px;
   line-height: 23px;
 }
+#form2{
+  width: 100%;
+}
+#form2 .btn{
+  font-size: 10px;
+}
+.modal {
+  
+ width: 100% !important;
+  
+}
 }
 
 
@@ -2260,11 +2344,16 @@ h4, .h4 {
   }
 
   .contact{
-    display: flex;
+    display: block;
   }
   .contact .container{
-    display: flex;
+    display: block;
   }
+  .contactForm h2{
+    font-size: 14px;
+    
+}
+  
   .testimonial-wrap {
     margin-left: 0px;
   }
@@ -2302,6 +2391,28 @@ h4, .h4 {
   line-height: 17px;
   font-size: 14px;
 }
+.contact .container .contactInfo .box .text {
+  font-size: 12px;
+}
+.contact .container .contactInfo{
+  width: 100%;
+}
+.contactForm {
+  width: 100%;
+  padding: 70px;
+  height: auto;
+  background: #fff;
+}
+.organization a {
+  padding: 10px;
+  margin-top: 40px;
+}
+.display-44{
+  text-align: left;
+  font-size: 20px;
+  color: #343a40;
+  padding-top: 20px;
+}
 
 }
 
@@ -2336,6 +2447,39 @@ p {
   line-height: 25px;
   font-family: 'Oswald', sans-serif;
   color: #223a66;
+}
+
+.contact {
+  padding: 10px 10px;
+ 
+ 
+  width: 100%;
+}
+.contact .container .contactInfo .box .text{
+  margin-left: 2px;
+}
+.contactForm h2{
+  font-size: 12px;
+}
+.contactForm .inputBox input, .contactForm .inputBox textarea {
+  width: 100%;
+  padding: 1px 0;
+  font-size: 8px;
+  margin: 5px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  /* resize: none; */
+}
+.mt-4{
+  width: 100%;
+  display: table-cell;
+}
+.justify-content-center {
+  width: 100%;
+}
+.mt-4 a{
+
 }
 }
 

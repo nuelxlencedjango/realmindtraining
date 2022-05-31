@@ -26,6 +26,10 @@
       .form2{
         margin-top: 100px;
         margin-bottom: 150px;
+       width: 500px;  
+       background-color: #223a66; 
+       align-items: center; 
+       text-align: center;
       }
         
       
@@ -36,7 +40,7 @@
 {{ message}}
 {% endfor %}
     
-    <div id="form2" class="container form2" style="width: 500px;  background-color: #223a66; align-items: center; text-align: center;">
+    <div id="form2" class="container form2" >
       <form action="{% url 'accounts:company' %}" method="POST" class="row g-3">
           {% csrf_token %}
           <div class="col-md-4">
@@ -57,7 +61,7 @@
               <label for="inputPassword4" class="form-label">Phone</label>
               <input type="text" class="form-control" id="inputNumber" name="phone" placeholder="Phone Number">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">How many people?</label>
                 <input type="text" class="form-control" id="inputlast_name" name="number_of_student" placeholder="Number of canidates" >
          
