@@ -405,6 +405,9 @@ a:focus {
 }
 /* end carousel*/
 
+.prod{
+  align-items: center !important;
+}
 
 /* card products here */
 .prod .container h1{
@@ -419,12 +422,13 @@ a:focus {
 }
 .prod .container .row {
   margin-top: 40px;
+  align-items: center !important;
   /*width: 1000px;*/
   
   
 }
 .container .col-md-3{
-  margin-left: 10px;
+  margin-left: 50px;
   text-decoration: none;
   padding: 10px 10px;
   

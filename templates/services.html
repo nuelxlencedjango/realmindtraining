@@ -8,469 +8,81 @@
 
 
 
-<section class="features">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="feature-block d-lg-flex">
-					<div class="feature-item mb-5 mb-lg-0">
-						<div class="feature-icon mb-4">
-						</div>
-						<!--<span>Online Services</span>-->
-						<h4 class="mb-3">Pysical classroom</h4>
-						<p class="mb-4">100% practical </p>
-						<p class="mb-4">Condusive learning environment </p>
-						<p class="mb-4">One on one tutorial </p>
-						<p class="mb-4">Move from zero to professional software developer </p>
-						
-						<a href="{% url 'product:contact' %}" class="btn btn-main btn-round-full">Make a appoinment</a>
-					</div>
-
-					<div class="feature-item mb-5 mb-lg-0">
-						<div class="feature-icon mb-4">
-						
-						</div>
-						<!--<span>Online Services</span>-->
-						<h4 class="mb-3">Online Services</h4>
-						<p class="mb-4">100% practical </p>
-						<p class="mb-4">Flexible time </p>
-						<p class="mb-4">24/7 support system</p>
-						<p class="mb-4">Move from zero to professional software developer </p>
-						
-						
-						<a href="{% url 'product:contact' %}" class="btn btn-main btn-round-full">Make a appoinment</a>
-					</div>
-					
-				
-					<div class="feature-item mb-5 mb-lg-0">
-						<div class="feature-icon mb-4">
-							<i class="icofont-support"></i>
-						</div>
-						<h4 class="mb-3">Working Hours</h4>
-						<ul class="w-hours list-unstyled">
-		                    <li class="d-flex justify-content-between">Mon - Wed : <span>9:00 - 17:00</span></li>
-		                    <li class="d-flex justify-content-between">Thu - Fri : <span>10:00 - 17:00</span></li>
-		                    <li class="d-flex justify-content-between">Sat  : <span>10:00 - 17:00</span></li>
-
-		                    <li class="d-flex justify-content-between">sun : <span>:On appointment</span></li>
-
-		                    </ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!--products here-->
-
-
-<div class="row justify-content-center realmind" style="margin-top: 50px;">
-	<div class="col-lg-6">
-		<div class="section-title">
-			<h2>Important Benefit of learning from us</h2>
-		</div>
-		<div class="desc">
-		<ol>
-			<li class="animate__animated animate__backInLeft animation-delay-1s"><h4>100% One on one practical tutorial </h4></li>
-			<li class="animate__animated animate__backInRight animation-delay-2s" style="animation-delay: 2s;"><h4>We assume you dont know anything so we teach you from scratch to professional level</h4></li>
-		    <li class="animate__animated animate__rotateIn animation-delay-1s h2" style="animation-delay: 3s;"><h4>Deployment of your projects online</h4></li>
-			<li class="animate__animated animate__rotateIn animation-delay-1s h2" style="animation-delay: 4s;"><h4>Two projects before you finish your program with us</h4></li>
-			<li class="animate__animated animate__rotateInDownLeft animation-delay" style="animation-delay: 5s;"><h4>Teach you how you can save your projects so intending employers can see your work</h4></li>
-			<li class="animate__animated animate__backInLeft animation-delay" style="animation-delay: 6s;"><h4>Teach you how you can apply for foreign companies</h4></li>
-			<li class="animate__animated animate__backInRight animation-delay" style="animation-delay: 7s;"><h4>Help you source for jobs online</h4></li>
-		</ol>
-		</div>
-
-	</div>
-
-	<div class="col-lg-6">
-		<h2 class="fact">Current Fact</h2>
-		<div class="section-right animate__animated animate__bounceInDown animation-delay-3s">
-			
-		
-		<p>There's no question that software programming is a hot career right now. A recent research by The U.S. Bureau of Labor Statistics projects 21 percent growth for programming jobs from 2018 to 2028, which is more than four times the average for all occupations. What’s more, the median annual pay for a software programmer is about $106,000, which nearly three times the median pay for all workers around the world .</p>
-	
-	</div>
-</div>
-</div>
-
-
-
-
-
-	  <section class="section about">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-4 col-sm-6">
-					<div class="about-img">
-						<img src="{% static 'images/webapp3.png' %}" alt="" class="img-fluid">
-						<img src="{% static 'images/mobile4.jpg' %}" alt="" class="img-fluid mt-4">
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<div class="about-img mt-4 mt-lg-0">
-						<img src="{% static 'images/mobile1.jpg' %}" alt="" height="1000" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="about-content pl-4 mt-4 mt-lg-0">
-						<h2 class="title-color"><br> develop yourself and start providing your service to the world</h2>
-						<p class="mt-4 mb-5">We provide best with the best tutors</p>
-	
-						<a href="{% url 'product:services' %}" class="btn btn-main-2 btn-round-full btn-icon">Services<i class="icofont-simple-right ml-3"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="prod">
-	<div class="container">
-		<h1>Some high in-demand skills around the globe</h1>
-		<div class="row my-5">
-			{% for course in courses %}
-
-			<div class="col-md-3 my-4">
-		   <a href="{% url 'product:detail' course.pk %}">
-		  
-				<img  src="{{ course.img.url }}" alt="" class="w-100">
-				<h4 class="my-">{{ course.name }}</h4>
-					<h3 class="average">Average salary:<span class="price"> ${{course.pay}}</span></3>
-				 <!--<a href="" class="opt">view options ></a>-->
-				
-				<p  class="describe">{{course.desc |truncatewords:30}}</p>
-					
-		   </a>
-			</div>
-			{% endfor %}
-		
-			</div>
-		</div>
-	</div>
-
-
 <section class="section service gray-bg">
 	<div class="container">
 		<div class="row">
-			<h3>Other courses</h3>
-			{% for course in product %}
-			<div class="col-lg-4 col-md-6 col-sm-6">
+			<h3>Our Services</h3>
+		
+			<div class="col-lg-6 col-md-6 col-sm-6">
 				<div class="service-item mb-4">
 					<div class="icon d-flex align-items-center">
 						<i class="{{course.icon}}"></i>
 						
-						<h4 class="mt-3 mb-3">{{ course.name }}</h4>
+						<h4 class="mt-3 mb-3">Web Development</h4>
 					</div>
 
 					<div class="content">
-						<p class="mb-4">{{course.desc  |truncatewords:35}} <a href="{% url 'product:product_detail' course.pk %}" class="read-more">Read more</a></p>
+						<p>We develop web applications to suit your business type.Be it E-commerce ,Portal web application,Content management system web application,Static web application,Animated web applications or any type,we have skilled web developers to give you beyound what you experct.</p>
 					</div>
 				</div>
 			</div>
-			{% endfor %}
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="service-item mb-4">
+					<div class="icon d-flex align-items-center">
+						<i class="{{course.icon}}"></i>
+						
+						<h4 class="mt-3 mb-3">Mobile App Development</h4>
+					</div>
+
+					<div class="content">
+						<p>We have a team of mobile app developers to bring your idea into mobile applications.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="service-item mb-4">
+					<div class="icon d-flex align-items-center">
+						<i class="{{course.icon}}"></i>
+						
+						<h4 class="mt-3 mb-3">Training</h4>
+					</div>
+
+					<div class="content">
+						<p>Our doors are opened for those who wish to enroll in our institute to become software developers.Contact us today to begin your journey.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="service-item mb-4">
+					<div class="icon d-flex align-items-center">
+						<i class="{{course.icon}}"></i>
+						
+						<h4 class="mt-3 mb-3">Recruitment</h4>
+					</div>
+
+					<div class="content">
+						<p>Looking to hire developers for your projects? Be it short or long term basis, we have skilled and ready developers to meet your expectations</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="service-item mb-4">
+					<div class="icon d-flex align-items-center">
+						<i class="{{course.icon}}"></i>
+						
+						<h4 class="mt-3 mb-3">IT Consultancy</h4>
+					</div>
+
+					<div class="content">
+						<p>WE are available for your IT consultancy .To give your all technical and experienced support for software products</p>
+					</div>
+				</div>
+			</div>
+			
 
 
 		</div>
 	</div>
 </section>
-
-
-
-
-
-
-
-
-
-
-{% endblock %}
-
-
-<!--<section class="section testimonial-2 gray-bg">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-7">
-				<div class="section-title text-center">
-					<h2>We served over 5000+ Patients</h2>
-					<div class="divider mx-auto my-4"></div>
-					<p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-lg-12 testimonial-wrap-2">
-				<div class="testimonial-block style-2  gray-bg">
-					<i class="icofont-quote-right"></i>
-
-					<div class="testimonial-thumb">
-						<img src="{% static 'images/team/test-thumb1.jpg' %}" alt="" class="img-fluid">
-					</div>
-
-					<div class="client-info ">
-						<h4>Amazing service!</h4>
-						<span>John Partho</span>
-						<p>
-							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
-						</p>
-					</div>
-				</div>
-
-				<div class="testimonial-block style-2  gray-bg">
-					<div class="testimonial-thumb">
-						<img src="{% static 'images/team/test-thumb2.jpg' %}" alt="" class="img-fluid">
-					</div>
-
-					<div class="client-info">
-						<h4>Expert doctors!</h4>
-						<span>Mullar Sarth</span>
-						<p>
-							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
-						</p>
-					</div>
-					
-					<i class="icofont-quote-right"></i>
-				</div>
-
-				<div class="testimonial-block style-2  gray-bg">
-					<div class="testimonial-thumb">
-						<img src="{% static 'images/team/test-thumb3.jpg' %}" alt="" class="img-fluid">
-					</div>
-
-					<div class="client-info">
-						<h4>Good Support!</h4>
-						<span>Kolis Mullar</span>
-						<p>
-							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
-						</p>
-					</div>
-					
-					<i class="icofont-quote-right"></i>
-				</div>
-
-				<div class="testimonial-block style-2  gray-bg">
-					<div class="testimonial-thumb">
-						<img src="{% static 'images/team/test-thumb4.jpg' %}" alt="" class="img-fluid">
-					</div>
-
-					<div class="client-info">
-						<h4>Nice Environment!</h4>
-						<span>Partho Sarothi</span>
-						<p class="mt-4">
-							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
-						</p>
-					</div>
-					<i class="icofont-quote-right"></i>
-				</div>
-
-				<div class="testimonial-block style-2  gray-bg">
-					<div class="testimonial-thumb">
-						<img src="{% static 'images/team/test-thumb1.jpg' %}" alt="" class="img-fluid">
-					</div>
-
-					<div class="client-info">
-						<h4>Modern Service!</h4>
-						<span>Kolis Mullar</span>
-						<p>
-							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
-						</p>
-					</div>
-					<i class="icofont-quote-right"></i>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>-->
-<!--<section class="section clients">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-7">
-				<div class="section-title text-center">
-					<h2>Partners who support us</h2>
-					<div class="divider mx-auto my-4"></div>
-					<p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row clients-logo">
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/1.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/2.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/3.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/4.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/5.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/6.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/3.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/4.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/5.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/6.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-		</div>
-	</div>
-</section>-->
-<!-- footer Start -->
-<!--<footer class="footer section gray-bg">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-4 mr-auto col-sm-6">
-				<div class="widget mb-5 mb-lg-0">
-					<div class="logo mb-4">
-						<img src="{% static 'images/logo.png' %}" alt="" class="img-fluid">
-					</div>
-					<p>Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati tenetur veritatis eveniet distinctio possimus.</p>
-
-					<ul class="list-inline footer-socials mt-4">
-						<li class="list-inline-item"><a href="https://www.facebook.com/themefisher"><i class="icofont-facebook"></i></a></li>
-						<li class="list-inline-item"><a href="https://twitter.com/themefisher"><i class="icofont-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="https://www.pinterest.com/themefisher/"><i class="icofont-linkedin"></i></a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="col-lg-2 col-md-6 col-sm-6">
-				<div class="widget mb-5 mb-lg-0">
-					<h4 class="text-capitalize mb-3">Department</h4>
-					<div class="divider mb-4"></div>
-
-					<ul class="list-unstyled footer-menu lh-35">
-						<li><a href="#">Surgery </a></li>
-						<li><a href="#">Wome's Health</a></li>
-						<li><a href="#">Radiology</a></li>
-						<li><a href="#">Cardioc</a></li>
-						<li><a href="#">Medicine</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="col-lg-2 col-md-6 col-sm-6">
-				<div class="widget mb-5 mb-lg-0">
-					<h4 class="text-capitalize mb-3">Support</h4>
-					<div class="divider mb-4"></div>
-
-					<ul class="list-unstyled footer-menu lh-35">
-						<li><a href="#">Terms & Conditions</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Company Support </a></li>
-						<li><a href="#">FAQuestions</a></li>
-						<li><a href="#">Company Licence</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="widget widget-contact mb-5 mb-lg-0">
-					<h4 class="text-capitalize mb-3">Get in Touch</h4>
-					<div class="divider mb-4"></div>
-
-					<div class="footer-contact-block mb-4">
-						<div class="icon d-flex align-items-center">
-							<i class="icofont-email mr-3"></i>
-							<span class="h6 mb-0">Support Available for 24/7</span>
-						</div>
-						<h4 class="mt-2"><a href="tel:+23-345-67890">Support@email.com</a></h4>
-					</div>
-
-					<div class="footer-contact-block">
-						<div class="icon d-flex align-items-center">
-							<i class="icofont-support mr-3"></i>
-							<span class="h6 mb-0">Mon to Fri : 08:30 - 18:00</span>
-						</div>
-						<h4 class="mt-2"><a href="tel:+23-345-67890">+23-456-6588</a></h4>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="footer-btm py-4 mt-5">
-			<div class="row align-items-center justify-content-between">
-				<div class="col-lg-6">
-					<div class="copyright">
-						&copy; Copyright Reserved to <span class="text-color">Novena</span> by <a href="https://themefisher.com/" target="_blank">Themefisher</a>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="subscribe-form text-lg-right mt-5 mt-lg-0">
-						<form action="#" class="subscribe">
-							<input type="text" class="form-control" placeholder="Your Email address">
-							<a href="#" class="btn btn-main-2 btn-round-full">Subscribe</a>
-						</form>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-4">
-					<a class="backtop js-scroll-trigger" href="#top">
-						<i class="icofont-long-arrow-up"></i>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>-->
-
-   
-
-
-
-
-
-
-
 
 {% endblock %}
