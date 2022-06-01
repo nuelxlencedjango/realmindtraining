@@ -427,10 +427,15 @@ a:focus {
   
   
 }
+.section .container .row .col-lg-4{
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .container .col-md-3{
-  margin-left: 50px;
+  margin-left: 30px;
   text-decoration: none;
-  padding: 10px 10px;
+  /*padding: 10px 10px;*/
+  padding-right: 50px;
   
   
 }
