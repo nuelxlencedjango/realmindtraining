@@ -116,8 +116,8 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 .carousel{
   margin-top: 20px;
   height: 65vh;
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 30px;
+  padding-right: 30px;
  
 }
 .carousel-item{
@@ -171,6 +171,8 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   outline: 0px;
   box-shadow: none;
 }
+
+
 
 .btn-main {
   background: #223a66;
