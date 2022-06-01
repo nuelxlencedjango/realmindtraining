@@ -116,9 +116,11 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 .carousel{
   margin-top: 20px;
   height: 65vh;
+
+ 
+ 
   padding-left: 100px;
   padding-right: 100px;
- 
 }
 .carousel-item{
   height: 100%;
@@ -2203,6 +2205,14 @@ element.style {
   left: 0px !important;
   
 }
+
+.carousel{
+  margin-top: 20px;
+  height: 65vh;
+  padding-left:0px;
+  padding-right: 0px;
+
+}
 }
 
 
@@ -2424,6 +2434,13 @@ h4, .h4 {
   color: #343a40;
   padding-top: 20px;
 }
+.carousel{
+  margin-top: 20px;
+  height: 65vh;
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
 
 }
 
@@ -2490,6 +2507,13 @@ p {
   width: 100%;
 }
 .mt-4 a{
+
+}
+.carousel{
+  margin-top: 20px;
+  height: 65vh;
+  padding-left: 0px;
+  padding-right: 0px;
 
 }
 }
