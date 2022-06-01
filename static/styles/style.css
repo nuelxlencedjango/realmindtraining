@@ -116,8 +116,8 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 .carousel{
   margin-top: 20px;
   height: 65vh;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
  
 }
 .carousel-item{
