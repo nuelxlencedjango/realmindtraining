@@ -35,8 +35,8 @@ urlpatterns = [
       path('database/', views.database,name='database'),
 
       path('train/' ,views.train,name='train'),
-      path('detail/<int:pk>/', views.detail,name='detail'),
-      path('product_detail/<int:pk>/', views.readmore,name='product_detail'),  
+      path('course_detail/<int:pk>/', views.detail,name='course_detail'),
+      path('advanced_course_detail/<int:pk>/', views.readmore,name='advanced_course_detail'),  
       
       #seo path
 

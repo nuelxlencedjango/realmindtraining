@@ -193,7 +193,7 @@
 			{% for course in courses %}
 
 			<div class="col-md-3 my-4">
-		   <a href="{% url 'product:detail' course.pk %}">
+		   <a href="{% url 'product:course_detail' course.pk %}">
 		  
 				<img  src="{{ course.img.url }}" alt="" class="w-100">
 				<h4 class="my-">{{ course.name }}</h4>
@@ -225,7 +225,7 @@
 					</div>
 
 					<div class="content">
-						<p class="mb-4">{{course.desc  |truncatewords:35}} <a href="{% url 'product:product_detail' course.pk %}" class="read-more">Read more</a></p>
+						<p class="mb-4">{{course.desc  |truncatewords:35}} <a href="{% url 'product:advanced_course_detail' course.pk %}" class="read-more">Read more</a></p>
 					</div>
 				</div>
 			</div>
