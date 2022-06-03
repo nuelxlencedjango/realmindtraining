@@ -1,10 +1,17 @@
 
 from django.urls import path
+
+from django.contrib.sitemaps.views import sitemap
+from product.sitemaps import ProductSitemap ,CourseSitemap 
+
 from .views import *
 from .import views 
 
 
-
+sitemaps={
+    'product':CourseSitemap,
+    'course':ProductSitemap,
+}
 
 app_name ="product"
 
@@ -29,5 +36,11 @@ urlpatterns = [
 
       path('train/' ,views.train,name='train'),
       path('detail/<int:pk>/', views.detail,name='detail'),
-      path('product_detail/<int:pk>/', views.readmore,name='product_detail')  
+      path('product_detail/<int:pk>/', views.readmore,name='product_detail'),  
+      
+      #seo path
+
+      #path('sitemap.xml', sitemap, {'sitemaps':sitemaps}), 
+      path('sitemap.xml', sitemap, {'sitemaps':sitemaps}),   
+      
 ]

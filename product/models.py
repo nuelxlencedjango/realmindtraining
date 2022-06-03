@@ -32,7 +32,7 @@ class Product(models.Model):
       verbose_name_plural='Products'
 
    def get_absolute_url(self):
-        return reverse('product:detail', args[self.id])
+        return reverse('product:detail', args=[self.id])
 
    def __str__(self):
       return self.name    
@@ -48,7 +48,7 @@ class Course(models.Model):
    
 
    def get_absolute_url(self):
-        return reverse('product:product_detail', args[self.id])
+        return reverse('product:product_detail', args=[self.id])
 
 
    class Meta:
