@@ -10,7 +10,7 @@ from django.contrib.auth.models import AbstractUser
 
 from django.contrib.auth import get_user_model
 from django.shortcuts import reverse
-
+from django.urls import reverse
 User = get_user_model()
 
 
@@ -31,6 +31,9 @@ class Product(models.Model):
    class Meta:
       verbose_name_plural='Products'
 
+   def get_absolute_url(self):
+        return reverse('product:detail', args[self.id])
+
    def __str__(self):
       return self.name    
 
@@ -43,7 +46,11 @@ class Course(models.Model):
    pay = models.FloatField(default=0)
    #icon = models.CharField(max_length=100,unique=False, default =None,blank=True,null=True)
    
-   
+
+   def get_absolute_url(self):
+        return reverse('product:product_detail', args[self.id])
+
+
    class Meta:
       verbose_name_plural='courses'
 
